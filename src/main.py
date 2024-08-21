@@ -68,3 +68,4 @@ if __name__ == "__main__":
     else:
         print("Carro 2 chegou primeiro ao destino")
 
+#davi
