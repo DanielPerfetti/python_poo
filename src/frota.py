@@ -2,15 +2,19 @@ class Carro:
     modelo : str
     marca : str
     cor : str
-    odometro : 0.0
-    motor_on : False
+    odometro = 0.0
+    tanque = 0.0
+    consumo_medio = 0.0
+    motor_on = False
 
     def __init__(self, modelo : str, marca : str, cor : str,
-                       odometro : float, motor : bool):
+                       odometro : float, tanque : float, consumo : float, motor : bool):
         self.modelo = modelo
         self.marca = marca
         self.cor = cor
         self.odometro = odometro
+        self.tanque = tanque
+        self.consumo_medio = consumo
         self.motor_on = motor
 
     def ligar(self):
@@ -36,6 +40,9 @@ class Carro:
                 f'cor {self.cor}\n{self.odometro} Km, '
                 f'motor {self.motor_on}')
         return info
+
+    def consumo(self):
+
 
 
 
