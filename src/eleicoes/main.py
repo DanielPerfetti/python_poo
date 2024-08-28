@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
     op_usr = 1
     while op_usr in (1,2):
-        op_user = int(input("Gerenciar: 1- Candidatos 2- Eleitores [1,2]: "))
+        op_usr = int(input("Gerenciar: 1- Candidatos 2- Eleitores [1,2]: "))
 
         if op_usr == 1:
             opcao = 1
@@ -124,19 +124,19 @@ if __name__ == "__main__":
                         break
                 except Exception as e:
                     print("Erro")
-    else:
-        opcao = 1
-        while opcao in (1,2,3):
-            try:
-                opcao = menu_eleitor()
+        else:
+            opcao = 1
+            while opcao in (1,2,3):
+                try:
+                    opcao = menu_eleitor()
 
-                if opcao == 1:
-                    inserir_eleitor(eleitores)
-                elif opcao == 2:
-                    atualizar_eleitor(eleitores)
-                elif opcao == 3:
-                    print("Saindo!")
-                    break
-            except Exception as e:
-                #traceback.print_exc()
-                print(e)
+                    if opcao == 1:
+                        inserir_eleitor(eleitores)
+                    elif opcao == 2:
+                        atualizar_eleitor(eleitores)
+                    elif opcao == 3:
+                        print("Saindo!")
+                        break
+                except Exception as e:
+                    #traceback.print_exc()
+                    print(e)
